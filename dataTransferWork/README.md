@@ -1,0 +1,9 @@
+-  The ambition of the project is the thinking way on dealing with the question.
+- At the working process, I have met the situation that some data  should be overwritten to the previous version.The original sending data can not be acquired.So that I have to utilize the json doc.
+- Getting the json doc,I would delete some  additional characters added by other programs.As a result, I would transfer the data into the map pattern.If you directly deserialize the JSON data into a specific object list (e.g., `List<OaUserVO>`) and then delete or modify fields, it might involve using setter methods or reflection, which increases code complexity. By using a `Map`, you can directly manipulate key-value pairs, simplifying the data processing.
+- so the data transfer process is divided into many steps below:
+  - read the json doc, get the object(String)
+  - transfer the string  into the map 
+  - data process(delete two characters)
+  - again transfer into String
+  - deserialize into a list of `OaUserVO` objects.
